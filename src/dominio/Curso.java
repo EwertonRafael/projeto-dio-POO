@@ -1,11 +1,11 @@
 package dominio;
 
-public class Curso extends Conteudo{
+public class Curso extends Conteudo {
 
-private int cargaHoraria;
-	
+	private int cargaHoraria;
+
 	public Curso() {
-		
+
 	}
 
 	public Curso(int cargaHoraria) {
@@ -22,12 +22,12 @@ private int cargaHoraria;
 
 	@Override
 	public String toString() {
-		return "Curso [titulo=" + getTitulo() + ", descricao=" + getDescricao()+ ", cargaHoraria=" + cargaHoraria + "]";
+		return " Curso: Título = " + getTitulo() + ", descricao = " + getDescricao() + ", cargaHoraria = " + cargaHoraria
+				+ ".";
 	}
 
 	@Override
 	public double calcularXP() {
-		// TODO Auto-generated method stub
-		return 0;
+		return XP_PADRAO * cargaHoraria;
 	}
 }

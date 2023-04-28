@@ -2,19 +2,21 @@ package dominio;
 
 public abstract class Conteudo {
 
-protected static final double XP_PADRAO = 10d;
-	
+	protected static final double XP_PADRAO = 10d;
+
 	private String titulo;
 	private String descricao;
-	
+
 	public Conteudo() {
 	}
-	
+
 	public Conteudo(String titulo, String descricao) {
 		super();
 		this.titulo = titulo;
 		this.descricao = descricao;
 	}
+
+	public abstract double calcularXP();
 
 	public String getTitulo() {
 		return titulo;
@@ -31,6 +33,5 @@ protected static final double XP_PADRAO = 10d;
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
 	}
-	
-	public abstract double calcularXP();
+
 }
